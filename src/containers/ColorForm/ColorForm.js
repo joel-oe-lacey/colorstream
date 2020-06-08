@@ -14,7 +14,7 @@ export default class ColorForm extends Component {
     render() {
         return (
             <form className='colorForm'>
-                <h3>Please enter your starting color</h3>
+                <h1>Please Enter A Color</h1>
                 <input
                     type='text'
                     placeholder='color'
