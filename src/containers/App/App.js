@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.scss';
 import ColorForm from '../ColorForm/ColorForm';
-import ColorBox from '../../components/ColorBox/ColorBox';
+import ColorCont from '../../components/ColorCont/ColorCont';
 
-function App() {
-  return (
-    <section className="App">
-      <ColorForm />
-      <section className="App-ColorDisp">
-        <ColorBox />
-        <ColorBox />
-        <ColorBox />
-        <ColorBox />
+export default class App extends Component {
+  constructor() {
+    super()
+    this.state = { color: '' }
+  }
+
+  render() {
+    return (
+      <section className="App">
+        <ColorForm />
+        <ColorCont />
       </section>
-    </section>
-  );
+    )
+  };
 }
 
-export default App;

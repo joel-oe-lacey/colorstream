@@ -11,6 +11,17 @@ export default class ColorForm extends Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
+    submitColor = e => {
+        e.preventDefault();
+        const { selectColor } = this.props;
+        selectColor(this.state.color);
+        this.resetInputs();
+    }
+
+    resetInputs = () => {
+        this.setState({color: ''})
+    }
+
     render() {
         return (
             <form className='colorForm'>
@@ -22,7 +33,7 @@ export default class ColorForm extends Component {
                     name='color'
                     onChange={this.handleChange}
                 />
-                <button>Submit</button>
+                <button onClick={this.submitColor}>Submit</button>
             </form>
         )
     }
