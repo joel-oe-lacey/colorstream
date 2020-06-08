@@ -5,12 +5,15 @@ import ColorBox from '../../components/ColorBox/ColorBox';
 
 function App() {
   return (
-    <div className="App">
+    <section className="App">
       <ColorForm />
-      <ColorBox />
-      <ColorBox />
-      <ColorBox />
-    </div>
+      <section className="App-ColorDisp">
+        <ColorBox />
+        <ColorBox />
+        <ColorBox />
+        <ColorBox />
+      </section>
+    </section>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ColorForm.scss';
 
 export default class ColorForm extends Component {
     constructor() {
@@ -12,7 +13,7 @@ export default class ColorForm extends Component {
 
     render() {
         return (
-            <form>
+            <form className='colorForm'>
                 <h3>Please enter your starting color</h3>
                 <input
                     type='text'
@@ -21,6 +22,7 @@ export default class ColorForm extends Component {
                     name='color'
                     onChange={this.handleChange}
                 />
+                <button>Submit</button>
             </form>
         )
     }
