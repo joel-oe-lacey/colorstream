@@ -15,8 +15,14 @@ export default class ColorForm extends Component {
     submitColor = e => {
         e.preventDefault();
         const { selectColor } = this.props;
-        selectColor(this.state.color);
-        this.resetInputs(e);
+        const isValid = tinycolor(this.state.color).isValid();
+        if (isValid) {
+            selectColor(this.state.color);
+            this.resetInputs(e);
+            e.target.innerText = 'Submit'
+        } else {
+            e.target.innerText = 'Please enter a valid hex color.'
+        }
     }
 
     resetInputs = e => {
@@ -45,8 +51,8 @@ export default class ColorForm extends Component {
                 <h1 className='color-change-5x'>Color Stream</h1>
                 <input
                     type='text'
-                    placeholder='Please Enter A Color'
-                    value={this.state.title}
+                    placeholder='Please Enter A Hex Color'
+                    value={this.state.color}
                     name='color'
                     onChange={this.handleChange}
                 />
