@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.scss';
 import ColorForm from '../ColorForm/ColorForm';
-import ColorBox from '../../components/ColorBox/ColorBox';
+import ColorCont from '../../components/ColorCont/ColorCont';
+const tinycolor = require("tinycolor2");
 
-function App() {
-  return (
-    <div className="App">
-      <ColorForm />
-      <ColorBox />
-      <ColorBox />
-      <ColorBox />
-    </div>
-  );
+export default class App extends Component {
+  constructor() {
+    super()
+    this.state = { colors: ['#E0E5EC', '#E0E5EC', '#E0E5EC', '#E0E5EC'] }
+  }
+
+  selectColor = color => {
+    //add normalization for a variety of color inputs
+    const selectedColor = '#' + color;
+    const colorParse = tinycolor(selectedColor).tetrad();
+    const generatedColors = colorParse.map(function (t) { return t.toHexString(); });
+    this.setState({ colors: [...generatedColors]});
+  }
+
+  render() {
+    return (
+      <section className="App">
+        <ColorForm selectColor={this.selectColor}/>
+        <ColorCont colors={this.state.colors}/>
+      </section>
+    )
+  };
 }
 
-export default App;

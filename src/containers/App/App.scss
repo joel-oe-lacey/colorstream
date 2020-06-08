@@ -13,3 +13,8 @@ html,
   background-color: #E0E5EC;
   overflow: hidden;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+}

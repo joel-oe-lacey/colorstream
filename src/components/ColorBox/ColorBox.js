@@ -1,10 +1,10 @@
 import React from 'react';
 import "./ColorBox.scss";
 
-const ColorBox = () => {
+const ColorBox = ({color}) => {
     return (
         <section className='color-cont'>
-            <div style={{ backgroundColor: "blue" }}
+            <div style={{ backgroundColor: `${color}` }}
                 className='color-cont-inner'
             ></div>
         </section>
