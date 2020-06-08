@@ -1,5 +1,6 @@
 {
   "name": "colorstream",
+  "homepage": "https://joel-oe-lacey.io/colorstream/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
