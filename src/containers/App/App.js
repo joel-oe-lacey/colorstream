@@ -12,8 +12,11 @@ export default class App extends Component {
 
   selectColor = color => {
     //add normalization for a variety of color inputs
+    let selectedColor = color;
     if (color) {
-      const selectedColor = '#' + color;
+      if(color[0] !== '#') {
+        selectedColor = '#' + color;
+      }
       const colorParse = tinycolor(selectedColor).tetrad();
       const generatedColors = colorParse.map(function (t) { return t.toHexString(); });
       this.setState({ colors: [...generatedColors]});
