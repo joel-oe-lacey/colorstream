@@ -7,15 +7,17 @@ const tinycolor = require("tinycolor2");
 export default class App extends Component {
   constructor() {
     super()
-    this.state = { colors: ['#E0E5EC', '#E0E5EC', '#E0E5EC', '#E0E5EC'] }
+    this.state = { colors: ['', '', '', ''] }
   }
 
   selectColor = color => {
     //add normalization for a variety of color inputs
-    const selectedColor = '#' + color;
-    const colorParse = tinycolor(selectedColor).tetrad();
-    const generatedColors = colorParse.map(function (t) { return t.toHexString(); });
-    this.setState({ colors: [...generatedColors]});
+    if (color) {
+      const selectedColor = '#' + color;
+      const colorParse = tinycolor(selectedColor).tetrad();
+      const generatedColors = colorParse.map(function (t) { return t.toHexString(); });
+      this.setState({ colors: [...generatedColors]});
+    }
   }
 
   render() {

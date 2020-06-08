@@ -4,9 +4,21 @@ exports[`ColorCont should match the snapshot 1`] = `
 <section
   className="ColorDisp"
 >
-  <ColorBox />
-  <ColorBox />
-  <ColorBox />
-  <ColorBox />
+  <ColorBox
+    color="B8C480"
+    key="0"
+  />
+  <ColorBox
+    color="D4E79E"
+    key="1"
+  />
+  <ColorBox
+    color="922D50"
+    key="2"
+  />
+  <ColorBox
+    color="501537"
+    key="3"
+  />
 </section>
 `;
