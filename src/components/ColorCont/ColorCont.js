@@ -2,13 +2,14 @@ import React from 'react';
 import "./ColorCont.scss";
 import ColorBox from '../ColorBox/ColorBox';
 
-const ColorCont = () => {
+const ColorCont = ({colors}) => {
+    const colorDisplay = colors.map(color => {
+        return <ColorBox color={color} />
+    })
+
     return (
         <section className="ColorDisp">
-            <ColorBox />
-            <ColorBox />
-            <ColorBox />
-            <ColorBox />
+            {colorDisplay}
         </section>
     )
 }
