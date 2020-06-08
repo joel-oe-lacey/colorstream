@@ -2,21 +2,30 @@
 
 exports[`ColorForm should match the snapshot 1`] = `
 <form
-  className="colorForm"
+  id="colorForm"
 >
-  <h1>
-    Please Enter A Color
+  <h1
+    className="color-change-5x"
+  >
+    Color Stream
   </h1>
   <input
     name="color"
     onChange={[Function]}
-    placeholder="color"
+    placeholder="Please Enter A Hex Color"
     type="text"
+    value=""
   />
-  <button
-    onClick={[Function]}
+  <div
+    className="outer-button"
   >
-    Submit
-  </button>
+    <button
+      onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      Submit
+    </button>
+  </div>
 </form>
 `;
