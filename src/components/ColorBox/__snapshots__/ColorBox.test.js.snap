@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorBox should match the snapshot 1`] = `
+<section
+  className="color-cont"
+>
+  <div
+    className="color-cont-inner"
+    style={
+      Object {
+        "backgroundColor": "blue",
+      }
+    }
+  />
+</section>
+`;
