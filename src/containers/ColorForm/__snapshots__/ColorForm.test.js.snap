@@ -1,15 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorForm should match the snapshot 1`] = `
-<form>
-  <h3>
-    Please enter your starting color
-  </h3>
+<form
+  className="colorForm"
+>
+  <h1>
+    Please Enter A Color
+  </h1>
   <input
     name="color"
     onChange={[Function]}
     placeholder="color"
     type="text"
   />
+  <button
+    onClick={[Function]}
+  >
+    Submit
+  </button>
 </form>
 `;
