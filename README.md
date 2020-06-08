@@ -1,68 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Color Stream
+Color Stream is a basic color scheme generator. Enter in a hex code to see four aligned Tetradic colors with their respective hex codes. It was built in three hours as the first part of MintBean & Turing School of Software and Design's hackathon collaboration. 
 
-## Available Scripts
+View the live page here: https://joel-oe-lacey.github.io/colorstream/
 
-In the project directory, you can run:
+![Screenshot](./public/screen.png)
 
-### `yarn start`
+## Development
+This project utilizes React with Jest & Enzyme for testing. It incorporates [TinyColor](https://github.com/bgrins/TinyColor) for color scheme generation and some of the dynamic styling. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users can input a hex code through a validated controlled form, this will update the button color on submission to show which color was chosen. Users are then presented with four aligned colors and their hex codes in the display below. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+As this was quickly put together, I aimed at a few specific learning goals and basic MVP generation. I used the opportunity to play around with some new styling principals I have been exploring including Neumorphic design and a few dynamic styling tricks and animations.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Future Iterations
+Given the limited time this was developed in there are several points where the UX/UI could be improved:
+- It would be nice for users to have a random color button.
+- It would also be nice to offer users color selection utilizing color picker instead of manual text Hex entry.
+- There are a variety of color pairing styles within TinyColor that could be visualized other than Tetradic.
+- Sometimes color contrast offers low readability currently.
